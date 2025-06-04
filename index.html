@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <title>Temple Website3</title>
+  <style>
+   html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+    body {
+      margin: 0;
+      font-family: 'Khmer OS Battambang', sans-serif;
+      background-image: url('../htmlb/p4.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .sidebar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      color: white;
+    }
+/* menu-items */	
+	.menu-item {
+  font-size: 24px;
+  margin: 20px 0;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+.menu-item:hover {
+  text-decoration: underline;
+}
+.menu-item.active {
+  background-color: white;
+  color: black;
+}
+
+/* content box */
+	.hh {
+  position: absolute;
+  top: 120px;
+  left: 650px;
+  right: 50px;
+  bottom: 100px; /* Set bottom to leave space */
+  max-width: 900px;
+  max-height: 600px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 25px;
+  line-height: 1.6;
+  overflow-y: scroll; /* enables scrolling */
+}
+
+/* content box-pic */
+.pic-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.pic-box {
+  width: 200px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.pic-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.pic-box p {
+  margin-top: 8px;
+  font-size: 16px;
+  font-family: 'Khmer OS Battambang', sans-serif;
+}
+  </style>
+</head>
+<body>
+<!-- Menu Items -->
+<div class="sidebar">
+  <a href="../htmlb/index.html" class="menu-item">ទំព័រដើម</a>
+  <a href="../htmlb/history.html" class="menu-item">ប្រវត្តិ</a>
+  <a href="../htmlb/about.html" class="menu-item">អំពី</a>
+  <a href="../htmlb/archietcture.html" class="menu-item" >ស្ថាបត្យកម្ម</a>
+  <a href="../htmlb/gallery.html" class="menu-item" >រូបភាព</a>
+</div>
+<!-- content box -->
+<div class="hh">
+	<ul>
+		<li>ឈ្មោះ: ប្រាសាទបាភួន</li>
+		<li>អ្នកកសាង: ព្រះបាទឧទយាទិត្យវរ្ម័នទី២ ដែលសោយរាជ្យចន្លោះឆ្នាំ(១០៥០-១០៦៦)</li> 
+		<li>កាលបរិច្ឆេទកសាង: ពាក់កណ្តាលសតវត្សរ៍ទី១១ រវាងឆ្នាំ១០៦០</li>
+		<li>ឧទ្ទិសថ្វាយ: ព្រហ្មញ្ញសាសនា</li>
+		<li>ទីតាំង: ក្រុងអង្គរ ខេត្តសៀមរាប</li>
+		<li>ប្រាសាទបាពួនត្រូវបានរៀបចំជុសជុលឡើងវិញ ដោយគម្រោងអង្គការ EFEO ចាប់ពីឆ្នាំ១៩៦០។ ប៉ុន្តែនៅក្នុងឆ្នាំ១៩៧២គម្រោងនេះត្រូវបានផ្អាកដំណើរការមួយរយៈពេល</li>
+		<li>ប៉ុន្តែប្រាសាទនេះចាប់ផ្តើមគម្រោងជួសជុលសារឡើងវិញចាប់ពីឆ្នាំ១៩៩៥ បន្ទាប់ពីបានផ្អាកការដ្ឋានរយៈពេល២៥ឆ្នាំ</li>
+		<li>បញ្ចប់គម្រោងជាស្ថាពរនៅខែមេសាឆ្នាំ២០១១</li>
+		<li>ត្រូវបានសម្ពោធឱ្យប្រើប្រាស់ និងទស្សនាជាផ្លូវការណ៍នៅថ្ងៃទី០៣ ខែកក្តដា ឆ្នាំ២០១១ ក្រោមអធិបតីព្រះមហាក្សត្រ សម្តេចព្រះបាទនរោត្តមសីហមុនី និងនាយករមន្រ្តីបារាំងឈ្មោះ Francois Fillon។</li>
+	</ul>
+<!-- content box-pic -->
+	<div class="pic-container">
+		<div class="pic-box" >
+		<img src="../htmlb/wow.jpg" alt="ព្រះបាទឧទយាទិត្យវរ្ម័នទី២">
+		<p>ព្រះបាទឧទយាទិត្យវរ្ម័នទី២</p>
+		</div>
+		
+		<div class="pic-box">
+		<img src="../htmlb/François_Fillon_2010.jpg" alt="Francois Fillon">
+		<p>Francois Fillon</p>
+		</div>
+	</div>	
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname;
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(item => {
+      const itemPath = new URL(item.href).pathname;
+
+      if (itemPath === currentPath) {
+        item.classList.add("active");
+      }
+    });
+  });
+</script>
+</body>
+</html>
+

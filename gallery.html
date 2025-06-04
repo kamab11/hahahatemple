@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <title>Temple Website3</title>
+  <style>
+   html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+    body {
+      margin: 0;
+      font-family: 'Khmer OS Battambang', sans-serif;
+      background-image: url('../htmlb/oo.jpg');
+      background-size: cover;
+      background-position: center;
+	  
+    }
+
+    .sidebar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      color: white;
+    }
+	
+	.menu-item {
+  font-size: 24px;
+  margin: 20px 0;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.menu-item.active {
+  background-color: white;
+  color: black;
+}
+
+   .ff {
+  position: absolute;
+  top: 100px;
+  left: 300px;
+  right: 50px;
+  bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* spacing between images */
+  justify-content: center; 
+  align-items: flex-start;
+}
+
+.image-grid img {
+  height: auto;
+  max-height: 300px; /* optional: limit tall images */
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <!-- Menu Items with links -->
+<a href="../htmlb/index.html" class="menu-item" onclick="setActive(this)">ទំព័រដើម</a>
+  <a href="../htmlb/history.html" class="menu-item" onclick="setActive(this)">ប្រវត្តិ</a>
+  <a href="../htmlb/about.html" class="menu-item" onclick="setActive(this)">អំពី</a>
+  <a href="../htmlb/archietcture.html" class="menu-item" onclick="setActive(this)">ស្ថាបត្យកម្ម</a>
+  <a href="../htmlb/gallery.html" class="menu-item" onclick="setActive(this)">រូបភាព</a>
+</div>
+
+
+<!-- content box -->
+<div class="ff">
+
+<!-- content box-pic -->
+<div class="image-grid">
+  <img src="../htmlb/g1.jpg" alt="pic1">
+  <img src="../htmlb/g2.jpg" alt="pic2">
+  <img src="../htmlb/g3.jpg" alt="pic3">
+  <img src="../htmlb/g4.jpg" alt="pic4">
+  <img src="../htmlb/g5.jpg" alt="pic5">
+  <img src="../htmlb/g6.jpg" alt="pic6">
+  <img src="../htmlb/g7.jpg" alt="pic7">
+  <img src="../htmlb/g8.jpg" alt="pic8">
+  <img src="../htmlb/g9.jpg" alt="pic9">
+  <img src="../htmlb/10.jpg" alt="pic10">
+  <img src="../htmlb/11.jpg" alt="pic11">
+  <img src="../htmlb/12.jpg" alt="pic12">
+  <img src="../htmlb/13.jpg" alt="pic13">
+  <img src="../htmlb/14.jpg" alt="pic14">
+  <img src="../htmlb/15.jpg" alt="pic15">
+  <img src="../htmlb/16.jpg" alt="pic16">
+  <img src="../htmlb/17.jpg" alt="pic17">
+  <img src="../htmlb/18.jpg" alt="pic18">
+  <img src="../htmlb/19.jpg" alt="pic19">
+  <img src="../htmlb/20.jpg" alt="pic20">
+</div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname;
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(item => {
+      const itemPath = new URL(item.href).pathname;
+
+      if (itemPath === currentPath) {
+        item.classList.add("active");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

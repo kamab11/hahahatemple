@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <title>Temple Website3</title>
+  <style>
+   html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+    body {
+      margin: 0;
+      font-family: 'Khmer OS Battambang', sans-serif;
+      background-image: url('../htmlb/p6.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .sidebar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      color: white;
+    }
+	
+	.menu-item {
+  font-size: 24px;
+  margin: 20px 0;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.menu-item.active {
+  background-color: white;
+  color: black;
+}
+	.aa {
+  position: absolute;
+  top: 120px;
+  left: 850px;
+  right: 50px;
+  bottom: 100px;
+  max-width: 600px;
+  max-height: 600px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 25px;
+  line-height: 1.6;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cc {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Use "contain" if you don't want cropping */
+  border-radius: 10px;
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+
+  <!-- Menu Items with links -->
+  <a href="../htmlb/index.html" class="menu-item" onclick="setActive(this)">ទំព័រដើម</a>
+  <a href="../htmlb/history.html" class="menu-item" onclick="setActive(this)">ប្រវត្តិ</a>
+  <a href="../htmlb/about.html" class="menu-item" onclick="setActive(this)">អំពី</a>
+  <a href="../htmlb/archietcture.html" class="menu-item" onclick="setActive(this)">ស្ថាបត្យកម្ម</a>
+  <a href="../htmlb/gallery.html" class="menu-item" onclick="setActive(this)">រូបភាព</a>
+</div>
+<div class="aa">
+<h3> LOCATION</h3>
+<p><u>click on the picture</u></p>
+<div class="cc" style="text-align:center;">
+<a href="https://www.google.com/maps/place/Baphuon+Temple/@13.443882,103.856214,17z/data=!3m1!4b1!4m6!3m5!1s0x3110142566ac9907:0xc20d200b2c486b9e!8m2!3d13.443882!4d103.856214!16zL20vMDI5eG55?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D">
+  <img src="../htmlb/lo.jpg" alt="map" class="bb">
+</a>
+</div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname;
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(item => {
+      const itemPath = new URL(item.href).pathname;
+
+      if (itemPath === currentPath) {
+        item.classList.add("active");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

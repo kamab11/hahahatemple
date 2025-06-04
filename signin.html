@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Temple Website</title>
+  <style>
+    html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('../htmlb/pic2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+    
+
+    /* Sign up form */
+    #signup-container {
+      background-color: black;
+	  opacity: 0.8;
+      margin: 120px auto 0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      width: 300px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      text-align: left;
+    }
+
+    #signup-container h3 {
+	  color: white;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .signup-input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    .signup-button {
+      margin-top: 10px;
+      padding: 8px;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .signup-button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sign Up Box -->
+  <div id="signup-container">
+    <h3>Sign Up</h3>
+    <input type="email" id="signup-email" class="signup-input" placeholder="Enter your email" required>
+    <input type="password" id="signup-password" class="signup-input" placeholder="Enter your password" required>
+    <button id="signup-submit" class="signup-button">Submit</button>
+  </div>
+  <!-- JavaScript for redirection -->
+  <script>
+    document.getElementById("signup-submit").addEventListener("click", function() {
+      const email = document.getElementById("signup-email").value.trim();
+      const password = document.getElementById("signup-password").value.trim();
+
+      if (email && password) {
+        // Redirect to your target page
+        window.location.href = "index.html";
+      } else {
+        alert("Please fill in both email and password.");
+      }
+    });
+  </script>
+</body>
+</html>
+
